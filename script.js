@@ -6,8 +6,9 @@ var botones = document.querySelectorAll("button");
 var listener = function(e) {
     var currentValue = localStorage.getItem(dateString);
     var inputNm = parseFloat(input.value);
-    
+        
         if(inputNm){
+
             if (currentValue) {
                 var currentValueParsed = parseInt(currentValue);
                 currentValueParsed += inputNm;
@@ -16,10 +17,12 @@ var listener = function(e) {
             else {
                 localStorage.setItem(dateString, inputNm);
             }
-    }
-}
 
-for( i = 0 ; i < botones.length ; i++ ){ botones[i].style.width = "100px"; botones[i].style.height = "100px"}
+        };
+};
+
+
+for( i = 0 ; i < botones.length ; i++ ){ botones[i].style.width = "100px"; botones[i].style.height = "100px"};
 
 document.addEventListener("keypress", function(e){
 
@@ -27,5 +30,7 @@ document.addEventListener("keypress", function(e){
         listener();
     }
 
-})
+    console.log(e);
+
+});
 
