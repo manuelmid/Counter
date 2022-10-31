@@ -6,7 +6,7 @@ var botones = document.querySelectorAll("button");
 var listener = function(e) {
     var currentValue = localStorage.getItem(dateString);
     var inputNm = parseFloat(input.value);
-        
+        console.log(inputNm);
         if(inputNm){
 
             if (currentValue) {
@@ -30,7 +30,7 @@ document.addEventListener("keypress", function(e){
         listener();
     }
 
-    console.log(e);
+    //console.log(e);
 
 });
 
