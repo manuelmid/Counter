@@ -1,5 +1,5 @@
 var dateString = new Date().toLocaleDateString();
-var input = document.querySelector(".input-12");//Añadir aqui el input
+var input = document.querySelector("div./*here the class*/ input");//Añadir aqui el input
 var botones = document.querySelectorAll("button");
 
 
