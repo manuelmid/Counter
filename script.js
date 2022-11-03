@@ -29,8 +29,6 @@ document.addEventListener("keypress", function(e){
     if(e.key === "Enter"){
         listener();
     }
-
-    //console.log(e);
-
+    
 });
 
