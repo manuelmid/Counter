@@ -1,5 +1,5 @@
 var dateString = new Date().toLocaleDateString();
-var input = document.querySelector("div./*here the class*/ input");//Añadir aqui el input
+var input = document.querySelector("input#inp");//Añadir aqui el input
 var botones = document.querySelectorAll("button");
 
 
@@ -24,11 +24,11 @@ var listener = function(e) {
 
 for( i = 0 ; i < botones.length ; i++ ){ botones[i].style.width = "100px"; botones[i].style.height = "100px"};
 
-document.addEventListener("keypress", function(e){
+document.addEventListener("keydown", function(e){
 
     if(e.key === "Enter"){
         listener();
     }
-    
+    console.log('move')
 });
 

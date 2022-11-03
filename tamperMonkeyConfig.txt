@@ -4,20 +4,19 @@
 // @version      0.1
 // @description  try to take over the world!
 // @author       You
-// @match        https://erp.digitecgalaxus.ch/*
+// @match        https://erp.digitecgalaxus.ch/de/ui/BookIn/BookIn
+// @icon         https://erp.digitecgalaxus.ch
 // @grant        none
 // ==/UserScript==
 
 (function() {
 
-var box = document.getElementById("controller");
-var dateString = new Date().toLocaleDateString();
-var input = document.querySelector(".input-12");//Añadir aqui el input
-var botones = document.querySelectorAll("button");
+    var dateString = new Date().toLocaleDateString();
+    var input = document.querySelector(".input-12");//Añadir aqui el input
 
-var listener = function(e) {
-    var currentValue = localStorage.getItem(dateString);
-    var inputNm = parseFloat(input.value);
+    var listener = function(e) {
+        var currentValue = localStorage.getItem(dateString);
+        var inputNm = parseFloat(input.value);
 
         if(inputNm){
             if (currentValue) {
@@ -29,21 +28,13 @@ var listener = function(e) {
                 localStorage.setItem(dateString, inputNm);
             }
     }
-}
-
-for( i = 0 ; i < botones.length ; i++ ){ botones[i].style.width = "100px"; botones[i].style.height = "100px"}
-
-document.addEventListener("keypress", function(e){
+};
+    document.addEventListener("keypress", function(e){
 
     if(e.key === "Enter"){
         listener();
     }
 
-})
-
-    box.style.backgroundColor = "#7cff7c80";
-    document.body.style.background = "radial-gradient(circle, rgba(7,144,172,1) 0%, rgba(9,9,121,1) 62%, rgba(2,0,36,1) 100%)";
-
-
+});
 
 })();
