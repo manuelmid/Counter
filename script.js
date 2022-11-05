@@ -1,7 +1,5 @@
 var dateString = new Date().toLocaleDateString();
-var input = document.querySelector("input#inp");//Añadir aqui el input
-var botones = document.querySelectorAll("button");
-
+var input = document.querySelector("");//
 
 var listener = function(e) {
     var currentValue = localStorage.getItem(dateString);
@@ -20,9 +18,6 @@ var listener = function(e) {
 
         };
 };
-
-
-for( i = 0 ; i < botones.length ; i++ ){ botones[i].style.width = "100px"; botones[i].style.height = "100px"};
 
 document.addEventListener("keydown", function(e){
 
